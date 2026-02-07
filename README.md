@@ -220,7 +220,7 @@ This project is open source and available under the MIT License.
 
 ### 👨‍💻 Author
 
-**Emirhan Büyükşenirli** - _Full Stack Developer & Game Designer_
+**Emirhan Buyukenirli** - _Full Stack Developer & Game Designer_
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/emirhan-buyuksenirli/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/yourusername)
@@ -232,7 +232,7 @@ Built with ❤️ using React, Vite, and Firebase
 - 💡 Always learning and building cool stuff
 - 💼 Open to collaboration and interesting projects
 
-_This project was created entirely by Emirhan Büyükşenirli as a showcase of modern web game development techniques._
+_This project was created entirely by Emirhan Buyuksenirli as a showcase of modern web game development techniques._
 
 **Let's connect!** Feel free to reach out on LinkedIn for collaborations, questions, or just to chat about tech and games!
 
@@ -461,7 +461,7 @@ Bu proje açık kaynaklıdır ve MIT Lisansı altında mevcuttur.
 
 ### 👨‍💻 Yazar
 
-**Emirhan Büyükşenirli** - _Full Stack Developer & Oyun Tasarımcısı_
+**Emirhan Büyüksenirli** - _Full Stack Developer & Oyun Tasarımcısı_
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Bağlan-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/emirhan-buyuksenirli/)
 [![GitHub](https://img.shields.io/badge/GitHub-Takip%20Et-181717?style=flat-square&logo=github)](https://github.com/yourusername)
@@ -488,7 +488,7 @@ _Bu proje, modern web oyun geliştirme tekniklerinin bir vitrini olarak tamamen 
 
 ## 📞 İletişim / Contact
 
-**Emirhan Büyükşenirli** - Full Stack Developer & Game Designer
+**Emirhan Buyuksenirli** - Full Stack Developer & Game Designer
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emirhan-buyuksenirli/)
 
