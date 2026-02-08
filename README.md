@@ -1,16 +1,15 @@
-# 🚀 Stellar Assault - Space Shooter Game
+# 🚀 Our Universe - Space Shooter Game
 
 [English](#english) | [Türkçe](#turkish)
 
 ---
 
 <a name="english"></a>
-
 ## 🇬🇧 English
 
 ### 🎮 About The Game
 
-**Stellar Assault** is a modern, fast-paced space shooter game built with cutting-edge web technologies. Pilot your spacecraft through waves of enemies, collect powerful upgrades, and climb the global leaderboard in this visually stunning arcade experience.
+**Our Universe** is a modern, fast-paced space shooter game built with cutting-edge web technologies. Pilot your spacecraft through waves of enemies, collect powerful upgrades, and climb the global leaderboard in this visually stunning arcade experience.
 
 ### ✨ Key Features
 
@@ -25,26 +24,22 @@
 ### 🎲 Game Mechanics
 
 #### **Enemy Types**
-
 - **Normal Enemies**: Basic threats with standard HP
 - **Fast Enemies**: Quick-moving targets (appears after certain score thresholds)
 - **Elite Enemies**: High HP, increased rewards (unlocked at 30,000+ points)
 
 #### **Difficulty Scaling**
-
 - Progressive difficulty based on your score
 - Enemy spawn rates increase over time
 - Wave spawns (2-4 simultaneous enemies) at high scores
 - Elite enemy waves with enhanced abilities
 
 #### **Upgrade Shop**
-
 - **Fire Rate**: Increase shooting speed (100 credits)
 - **Damage**: Boost bullet damage (150 credits)
 - **Shield**: Temporary invincibility (200 credits)
 
 #### **Special Weapons** (Timed Power-ups)
-
 - **⫸ Triple Shot**: Three-way spread fire
 - **⫷⫸ Dual Shot**: Side-by-side bullets
 - **✦ Surround Fire**: 360-degree attack pattern
@@ -52,43 +47,36 @@
 ### 🛠️ Technologies Used
 
 #### **Frontend Framework**
-
 - **React 18.3.1** - Modern UI library with hooks
 - **Vite 5.4.10** - Lightning-fast build tool and dev server
 
 #### **Programming Languages**
-
 - **JavaScript (ES6+)** - Core game logic
 - **CSS3** - Styling with animations and GPU acceleration
 - **HTML5** - Semantic markup
 
 #### **Backend & Database**
-
 - **Firebase 10.7.1** - Backend-as-a-Service platform
   - **Firestore** - Real-time NoSQL database for leaderboard
   - **Real-time Sync** - Live score updates across all players
 
 #### **UI Components**
-
 - **Lucide React** - Beautiful icon library
   - Rocket, Zap, Shield, Target, Trophy, Star icons
 
 #### **Game Architecture**
-
 - **React Hooks**: `useState`, `useEffect`, `useRef`, `useCallback`
 - **Ref-based System**: High-performance state management
 - **Direct DOM Manipulation**: For smooth 60 FPS movement
 - **GPU Acceleration**: CSS `transform3d` and `will-change`
 
 #### **Performance Optimizations**
-
 - **60 FPS Game Loop**: Optimized setInterval timing
 - **Collision Detection**: Optimized with early exit patterns
 - **Particle System**: Efficient explosion effects
 - **Memory Management**: Proper cleanup and garbage collection
 
 #### **Responsive Design**
-
 - **Touch Controls**: Mobile-optimized input system
 - **Mouse Controls**: Precise desktop aiming
 - **Keyboard Controls**: WASD + Arrow key support
@@ -97,7 +85,7 @@
 ### 📁 Project Structure
 
 ```
-stellar-assault/
+our-universe/
 ├── src/
 │   ├── StellarAssault.jsx      # Main game component
 │   ├── StellarAssault.css      # Game styling
@@ -113,21 +101,18 @@ stellar-assault/
 ### 🚀 Getting Started
 
 #### Prerequisites
-
 - Node.js 16+ and npm
 - Firebase account (for leaderboard feature)
 
 #### Installation
 
 1. **Clone the repository**
-
 ```bash
-git clone https://github.com/yourusername/stellar-assault.git
-cd stellar-assault
+git clone https://github.com/yourusername/our-universe.git
+cd our-universe
 ```
 
 2. **Install dependencies**
-
 ```bash
 npm install
 ```
@@ -139,13 +124,11 @@ npm install
    - Create a `.env` file in the root directory with your Firebase credentials
 
 4. **Run development server**
-
 ```bash
 npm run dev
 ```
 
 7. **Build for production**
-
 ```bash
 npm run build
 ```
@@ -153,19 +136,16 @@ npm run build
 ### 🎮 How to Play
 
 #### **Desktop Controls**
-
 - **Mouse**: Move your ship
 - **Auto-Fire**: Ship shoots automatically
 - **WASD / Arrow Keys**: Alternative movement
 - **ESC / P**: Pause game
 
 #### **Mobile Controls**
-
 - **Touch & Drag**: Move your ship
 - **Auto-Fire**: Ship shoots automatically
 
 #### **Objective**
-
 - Destroy enemies to earn points and credits
 - Spend credits on upgrades in the shop
 - Collect power-ups for temporary advantages
@@ -184,21 +164,18 @@ npm run build
 ### 🔧 Advanced Features
 
 #### **Real-time Leaderboard**
-
 - Automatic score submission on game over
 - Live ranking updates
 - Player rank display (#1, #2, etc.)
 - Total players count
 
 #### **GPU-Accelerated Rendering**
-
 - CSS `transform3d` for smooth animations
 - Hardware acceleration via `will-change`
 - Direct DOM manipulation for player movement
 - Optimized collision detection
 
 #### **Adaptive Difficulty**
-
 - Score-based enemy HP scaling
 - Progressive spawn rate increases
 - Elite wave mechanics (30k+ score)
@@ -220,10 +197,10 @@ This project is open source and available under the MIT License.
 
 ### 👨‍💻 Author
 
-**Emirhan Buyukenirli** - _Full Stack Developer & Game Designer_
+**Emirhan Büyüksenirli** - *Full Stack Developer & Game Designer*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/emirhan-buyuksenirli/)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/yourusername)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/Emirhan-bs)
 
 Built with ❤️ using React, Vite, and Firebase
 
@@ -232,7 +209,7 @@ Built with ❤️ using React, Vite, and Firebase
 - 💡 Always learning and building cool stuff
 - 💼 Open to collaboration and interesting projects
 
-_This project was created entirely by Emirhan Buyuksenirli as a showcase of modern web game development techniques._
+*This project was created entirely by Emirhan Büyüksenirli as a showcase of modern web game development techniques.*
 
 **Let's connect!** Feel free to reach out on LinkedIn for collaborations, questions, or just to chat about tech and games!
 
@@ -246,12 +223,11 @@ _This project was created entirely by Emirhan Buyuksenirli as a showcase of mode
 ---
 
 <a name="turkish"></a>
-
 ## 🇹🇷 Türkçe
 
 ### 🎮 Oyun Hakkında
 
-**Stellar Assault**, son teknoloji web teknolojileri ile geliştirilmiş modern, hızlı tempolu bir uzay savaşı oyunudur. Uzay gemini düşman dalgalarına karşı yönlendir, güçlü yükseltmeler topla ve görsel açıdan büyüleyici bu arcade deneyiminde global lider tablosuna tırman.
+**Our Universe**, son teknoloji web teknolojileri ile geliştirilmiş modern, hızlı tempolu bir uzay savaşı oyunudur. Uzay gemini düşman dalgalarına karşı yönlendir, güçlü yükseltmeler topla ve görsel açıdan büyüleyici bu arcade deneyiminde global lider tablosuna tırman.
 
 ### ✨ Temel Özellikler
 
@@ -266,26 +242,22 @@ _This project was created entirely by Emirhan Buyuksenirli as a showcase of mode
 ### 🎲 Oyun Mekaniği
 
 #### **Düşman Türleri**
-
 - **Normal Düşmanlar**: Standart HP ile temel tehditler
 - **Hızlı Düşmanlar**: Hızlı hareket eden hedefler (belirli skor eşiklerinden sonra)
 - **Elit Düşmanlar**: Yüksek HP, artırılmış ödüller (30.000+ puan sonrası)
 
 #### **Zorluk Ölçeklendirmesi**
-
 - Skorunuza göre artan zorluk
 - Zamanla artan düşman oluşum oranları
 - Yüksek skorlarda dalga oluşumları (2-4 eş zamanlı düşman)
 - Geliştirilmiş yeteneklere sahip elit düşman dalgaları
 
 #### **Yükseltme Mağazası**
-
 - **Atış Hızı**: Ateş etme hızını artır (100 kredi)
 - **Hasar**: Mermi hasarını yükselt (150 kredi)
 - **Kalkan**: Geçici dokunulmazlık (200 kredi)
 
 #### **Özel Silahlar** (Zamanlı Güçlendirmeler)
-
 - **⫸ Üçlü Atış**: Üç yönlü yayılma ateşi
 - **⫷⫸ İkili Atış**: Yan yana mermiler
 - **✦ Çember Ateş**: 360 derece saldırı deseni
@@ -293,43 +265,36 @@ _This project was created entirely by Emirhan Buyuksenirli as a showcase of mode
 ### 🛠️ Kullanılan Teknolojiler
 
 #### **Frontend Framework**
-
 - **React 18.3.1** - Hook'lar ile modern UI kütüphanesi
 - **Vite 5.4.10** - Şimşek hızında derleme aracı ve dev server
 
 #### **Programlama Dilleri**
-
 - **JavaScript (ES6+)** - Çekirdek oyun mantığı
 - **CSS3** - Animasyonlar ve GPU hızlandırması ile stil
 - **HTML5** - Semantik işaretleme
 
 #### **Backend & Veritabanı**
-
 - **Firebase 10.7.1** - Servis olarak Backend platformu
   - **Firestore** - Lider tablosu için gerçek zamanlı NoSQL veritabanı
   - **Gerçek Zamanlı Senkronizasyon** - Tüm oyuncular arasında canlı skor güncellemeleri
 
 #### **UI Bileşenleri**
-
 - **Lucide React** - Güzel ikon kütüphanesi
   - Rocket, Zap, Shield, Target, Trophy, Star ikonları
 
 #### **Oyun Mimarisi**
-
 - **React Hooks**: `useState`, `useEffect`, `useRef`, `useCallback`
 - **Ref Tabanlı Sistem**: Yüksek performanslı durum yönetimi
 - **Direkt DOM Manipülasyonu**: Akıcı 60 FPS hareket için
 - **GPU Hızlandırma**: CSS `transform3d` ve `will-change`
 
 #### **Performans Optimizasyonları**
-
 - **60 FPS Oyun Döngüsü**: Optimize edilmiş setInterval zamanlaması
 - **Çarpışma Tespiti**: Erken çıkış desenleri ile optimize edilmiş
 - **Partikül Sistemi**: Verimli patlama efektleri
 - **Bellek Yönetimi**: Düzgün temizleme ve çöp toplama
 
 #### **Responsive Tasarım**
-
 - **Dokunma Kontrolleri**: Mobil için optimize edilmiş giriş sistemi
 - **Fare Kontrolleri**: Hassas masaüstü nişan alma
 - **Klavye Kontrolleri**: WASD + Yön tuşları desteği
@@ -338,7 +303,7 @@ _This project was created entirely by Emirhan Buyuksenirli as a showcase of mode
 ### 📁 Proje Yapısı
 
 ```
-stellar-assault/
+our-universe/
 ├── src/
 │   ├── StellarAssault.jsx      # Ana oyun bileşeni
 │   ├── StellarAssault.css      # Oyun stilleri
@@ -354,21 +319,18 @@ stellar-assault/
 ### 🚀 Başlarken
 
 #### Ön Gereksinimler
-
 - Node.js 16+ ve npm
 - Firebase hesabı (lider tablosu özelliği için)
 
 #### Kurulum
 
 1. **Depoyu klonlayın**
-
 ```bash
-git clone https://github.com/kullaniciadi/stellar-assault.git
-cd stellar-assault
+git clone https://github.com/kullaniciadi/our-universe.git
+cd our-universe
 ```
 
 2. **Bağımlılıkları yükleyin**
-
 ```bash
 npm install
 ```
@@ -380,13 +342,11 @@ npm install
    - Kök dizinde Firebase kimlik bilgilerinizle bir `.env` dosyası oluşturun
 
 4. **Geliştirme sunucusunu çalıştırın**
-
 ```bash
 npm run dev
 ```
 
 7. **Prodüksiyon için derleyin**
-
 ```bash
 npm run build
 ```
@@ -394,19 +354,16 @@ npm run build
 ### 🎮 Nasıl Oynanır
 
 #### **Masaüstü Kontrolleri**
-
 - **Fare**: Geminizi hareket ettirin
 - **Otomatik Ateş**: Gemi otomatik ateş eder
 - **WASD / Yön Tuşları**: Alternatif hareket
 - **ESC / P**: Oyunu duraklat
 
 #### **Mobil Kontroller**
-
 - **Dokun & Sürükle**: Geminizi hareket ettirin
 - **Otomatik Ateş**: Gemi otomatik ateş eder
 
 #### **Hedef**
-
 - Puan ve kredi kazanmak için düşmanları yok edin
 - Mağazadan yükseltmeler satın almak için kredi harcayın
 - Geçici avantajlar için güçlendirmeler toplayın
@@ -425,21 +382,18 @@ npm run build
 ### 🔧 Gelişmiş Özellikler
 
 #### **Gerçek Zamanlı Lider Tablosu**
-
 - Oyun bittiğinde otomatik skor gönderimi
 - Canlı sıralama güncellemeleri
 - Oyuncu sıralaması gösterimi (#1, #2, vb.)
 - Toplam oyuncu sayısı
 
 #### **GPU Hızlandırmalı Render**
-
 - Akıcı animasyonlar için CSS `transform3d`
 - `will-change` ile donanım hızlandırma
 - Oyuncu hareketi için direkt DOM manipülasyonu
 - Optimize edilmiş çarpışma tespiti
 
 #### **Uyarlanabilir Zorluk**
-
 - Skora dayalı düşman HP ölçeklendirmesi
 - Artan oluşum oranı artışları
 - Elit dalga mekaniği (30k+ skor)
@@ -461,10 +415,10 @@ Bu proje açık kaynaklıdır ve MIT Lisansı altında mevcuttur.
 
 ### 👨‍💻 Yazar
 
-**Emirhan Büyüksenirli** - _Full Stack Developer & Oyun Tasarımcısı_
+**Emirhan Büyüksenirli** - *Full Stack Developer & Oyun Tasarımcısı*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Bağlan-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/emirhan-buyuksenirli/)
-[![GitHub](https://img.shields.io/badge/GitHub-Takip%20Et-181717?style=flat-square&logo=github)](https://github.com/yourusername)
+[![GitHub](https://img.shields.io/badge/GitHub-Takip%20Et-181717?style=flat-square&logo=github)](https://github.com/Emirhan-bs)
 
 React, Vite ve Firebase kullanılarak ❤️ ile yapılmıştır
 
@@ -473,7 +427,7 @@ React, Vite ve Firebase kullanılarak ❤️ ile yapılmıştır
 - 💡 Her zaman öğrenen ve harika şeyler inşa eden
 - 💼 İş birliği ve ilginç projelere açık
 
-_Bu proje, modern web oyun geliştirme tekniklerinin bir vitrini olarak tamamen Emirhan Büyüksenirli tarafından oluşturulmuştur._
+*Bu proje, modern web oyun geliştirme tekniklerinin bir vitrini olarak tamamen Emirhan Büyüksenirli tarafından oluşturulmuştur.*
 
 **Hadi bağlanalım!** İş birliği, sorular veya sadece teknoloji ve oyunlar hakkında sohbet etmek için LinkedIn'den iletişime geçmekten çekinmeyin!
 
@@ -488,7 +442,7 @@ _Bu proje, modern web oyun geliştirme tekniklerinin bir vitrini olarak tamamen 
 
 ## 📞 İletişim / Contact
 
-**Emirhan Buyuksenirli** - Full Stack Developer & Game Designer
+**Emirhan Büyüksenirli** - Full Stack Developer & Game Designer
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emirhan-buyuksenirli/)
 
@@ -502,4 +456,6 @@ Sorular, öneriler veya hata raporları için:
 
 ---
 
-**Made with 🚀 and ❤️ by Emirhan Buyuksenirli | Emirhan Büyüksenirli tarafından 🚀 ve ❤️ ile yapılmıştır**
+**Made with 🚀 and ❤️ by Emirhan Büyüksenirli | Emirhan Büyüksenirli tarafından 🚀 ve ❤️ ile yapılmıştır**
+
+*A solo project showcasing modern web game development | Modern web oyun geliştirmeyi sergileyen bir solo proje*

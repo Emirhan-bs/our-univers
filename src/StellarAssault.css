@@ -716,6 +716,23 @@
 .space-bg {
   position: absolute;
   inset: 0;
+  background: 
+    radial-gradient(2px 2px at 20% 80%, white, transparent),
+    radial-gradient(2px 2px at 40% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 60%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 70%, white, transparent),
+    radial-gradient(1px 1px at 15% 20%, white, transparent),
+    radial-gradient(2px 2px at 60% 90%, white, transparent),
+    radial-gradient(1px 1px at 25% 50%, white, transparent),
+    radial-gradient(2px 2px at 70% 30%, white, transparent),
+    radial-gradient(1px 1px at 35% 70%, white, transparent),
+    radial-gradient(2px 2px at 85% 45%, white, transparent),
+    radial-gradient(1px 1px at 10% 60%, white, transparent),
+    radial-gradient(1px 1px at 45% 15%, white, transparent),
+    radial-gradient(2px 2px at 95% 85%, white, transparent),
+    radial-gradient(1px 1px at 5% 35%, white, transparent),
+    radial-gradient(1px 1px at 75% 55%, white, transparent);
   background-size: 200% 200%;
   background-repeat: repeat;
   animation: starsMove 20s linear infinite;
@@ -849,6 +866,87 @@
   .developer-watermark {
     font-size: 10px !important;
     letter-spacing: 1px !important;
+  }
+  
+  /* Game Over Screen - Mobile */
+  .game-over-title {
+    font-size: 32px !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .final-score {
+    margin-bottom: 25px !important;
+  }
+  
+  .score-label {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+  }
+  
+  .score-value {
+    font-size: 32px !important;
+  }
+  
+  .player-rank {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+  
+  .high-scores-table {
+    padding: 15px !important;
+    margin-bottom: 20px !important;
+    max-height: 350px !important;
+  }
+  
+  .table-header {
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+  }
+  
+  .table-header svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  .total-players {
+    font-size: 11px !important;
+  }
+  
+  .scores-list {
+    gap: 6px !important;
+    max-height: 250px !important;
+  }
+  
+  .score-row {
+    padding: 10px 12px !important;
+    gap: 12px !important;
+  }
+  
+  .position {
+    font-size: 14px !important;
+    width: 25px !important;
+  }
+  
+  .player-name {
+    font-size: 13px !important;
+    letter-spacing: 1px !important;
+  }
+  
+  .player-score {
+    font-size: 14px !important;
+  }
+  
+  .new-badge {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  .restart-button {
+    font-size: 14px !important;
+    padding: 12px 30px !important;
   }
 }
 
