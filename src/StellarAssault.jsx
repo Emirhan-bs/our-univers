@@ -5,7 +5,7 @@ import { saveHighScoreToFirebase, subscribeToHighScores } from "./firebase";
 
 const GAME_WIDTH = 600;
 const GAME_HEIGHT = 800;
-const PLAYER_SIZE = 40;
+const PLAYER_SIZE = 120; // Increased to 120x120 - LARGE!
 const ENEMY_SIZE = 35;
 const BULLET_SIZE = 8;
 const POWERUP_SIZE = 25;
@@ -60,31 +60,31 @@ const StellarAssault = () => {
 
   // Load high scores from Firestore (real-time updates)
   useEffect(() => {
-    console.log("🔥 Attempting to connect to Firebase...");
-
+    console.log('🔥 Attempting to connect to Firebase...');
+    
     try {
       const unsubscribe = subscribeToHighScores((scores) => {
-        console.log("📊 Received scores from Firebase:", scores.length);
+        console.log('📊 Received scores from Firebase:', scores.length);
         // Only update if scores actually changed
-        setHighScores((prevScores) => {
+        setHighScores(prevScores => {
           if (JSON.stringify(prevScores) === JSON.stringify(scores)) {
             return prevScores; // No change, don't re-render
           }
           return scores;
         });
       });
-
-      console.log("✅ Firebase subscription active");
+      
+      console.log('✅ Firebase subscription active');
       return () => {
-        console.log("🔌 Disconnecting from Firebase");
+        console.log('🔌 Disconnecting from Firebase');
         unsubscribe();
       };
     } catch (error) {
-      console.error("❌ Firebase connection error:", error);
+      console.error('❌ Firebase connection error:', error);
       // Fallback to localStorage if Firebase fails
       const saved = localStorage.getItem("stellarAssaultScores");
       if (saved) {
-        console.log("📦 Loading from localStorage as fallback");
+        console.log('📦 Loading from localStorage as fallback');
         setHighScores(JSON.parse(saved));
       }
     }
@@ -94,32 +94,32 @@ const StellarAssault = () => {
   const saveHighScore = useCallback(async () => {
     // Prevent duplicate saves
     if (scoreSaved) {
-      console.log("⏭️ Score already saved, skipping...");
+      console.log('⏭️ Score already saved, skipping...');
       return;
     }
-
+    
     if (playerName && score > 0) {
-      console.log("💾 Attempting to save score:", { playerName, score });
+      console.log('💾 Attempting to save score:', { playerName, score });
       setScoreSaved(true); // Mark as saved immediately
-
+      
       try {
         const success = await saveHighScoreToFirebase(playerName, score);
-
+        
         if (success) {
-          console.log("✅ Score saved to Firebase successfully!");
+          console.log('✅ Score saved to Firebase successfully!');
         } else {
-          console.warn("⚠️ Firebase save returned false");
+          console.warn('⚠️ Firebase save returned false');
         }
       } catch (error) {
-        console.error("❌ Error saving to Firebase:", error);
+        console.error('❌ Error saving to Firebase:', error);
       }
     }
   }, [playerName, score, scoreSaved]); // Removed highScores dependency!
 
   // Save high score when game ends (only once)
   useEffect(() => {
-    if (gameState === "gameOver") {
-      console.log("🎮 Game Over - saving score...");
+    if (gameState === 'gameOver') {
+      console.log('🎮 Game Over - saving score...');
       saveHighScore();
     }
   }, [gameState, saveHighScore]);
@@ -148,6 +148,9 @@ const StellarAssault = () => {
       setFireRate(300);
       setBulletDamage(1);
       setShieldActive(false);
+      setSpecialWeapon(null); // Reset special weapon
+      setSpecialWeaponTimer(0); // Reset timer
+      setBombAvailable(false); // Reset bomb
     }
   };
 
@@ -164,8 +167,8 @@ const StellarAssault = () => {
       newBullets.push(
         {
           id: Math.random(),
-          x: currentPlayer.x,
-          y: currentPlayer.y - 10,
+          x: currentPlayer.x, // Center bullet
+          y: currentPlayer.y - 20,
           vx: 0,
           vy: -8,
           speed: 8,
@@ -173,8 +176,8 @@ const StellarAssault = () => {
         },
         {
           id: Math.random(),
-          x: currentPlayer.x - 15,
-          y: currentPlayer.y - 10,
+          x: currentPlayer.x - 25, // Left bullet
+          y: currentPlayer.y - 20,
           vx: -2,
           vy: -8,
           speed: 8,
@@ -182,8 +185,8 @@ const StellarAssault = () => {
         },
         {
           id: Math.random(),
-          x: currentPlayer.x + 15,
-          y: currentPlayer.y - 10,
+          x: currentPlayer.x + 25, // Right bullet
+          y: currentPlayer.y - 20,
           vx: 2,
           vy: -8,
           speed: 8,
@@ -195,8 +198,8 @@ const StellarAssault = () => {
       newBullets.push(
         {
           id: Math.random(),
-          x: currentPlayer.x - 20,
-          y: currentPlayer.y,
+          x: currentPlayer.x - 30, // Left side
+          y: currentPlayer.y - 10,
           vx: 0,
           vy: -8,
           speed: 8,
@@ -204,8 +207,8 @@ const StellarAssault = () => {
         },
         {
           id: Math.random(),
-          x: currentPlayer.x + 20,
-          y: currentPlayer.y,
+          x: currentPlayer.x + 30, // Right side
+          y: currentPlayer.y - 10,
           vx: 0,
           vy: -8,
           speed: 8,
@@ -217,8 +220,8 @@ const StellarAssault = () => {
       newBullets.push(
         {
           id: Math.random(),
-          x: currentPlayer.x,
-          y: currentPlayer.y - 20,
+          x: currentPlayer.x, // Front (center)
+          y: currentPlayer.y - 30,
           vx: 0,
           vy: -8,
           speed: 8,
@@ -226,8 +229,8 @@ const StellarAssault = () => {
         },
         {
           id: Math.random(),
-          x: currentPlayer.x,
-          y: currentPlayer.y + 20,
+          x: currentPlayer.x, // Back (center)
+          y: currentPlayer.y + 30,
           vx: 0,
           vy: 8,
           speed: 8,
@@ -235,7 +238,7 @@ const StellarAssault = () => {
         },
         {
           id: Math.random(),
-          x: currentPlayer.x - 20,
+          x: currentPlayer.x - 30, // Left
           y: currentPlayer.y,
           vx: -8,
           vy: 0,
@@ -244,7 +247,7 @@ const StellarAssault = () => {
         },
         {
           id: Math.random(),
-          x: currentPlayer.x + 20,
+          x: currentPlayer.x + 30, // Right
           y: currentPlayer.y,
           vx: 8,
           vy: 0,
@@ -253,11 +256,11 @@ const StellarAssault = () => {
         },
       );
     } else {
-      // Normal single shot - straight up
+      // Normal single shot - straight up from CENTER
       newBullets.push({
         id: Math.random(),
-        x: currentPlayer.x,
-        y: currentPlayer.y - 10,
+        x: currentPlayer.x, // Perfectly centered
+        y: currentPlayer.y - 20,
         vx: 0,
         vy: -8,
         speed: 8,
@@ -430,9 +433,7 @@ const StellarAssault = () => {
 
     // Cache dimensions outside the interval
     const currentWidth = isTouchDevice.current ? window.innerWidth : GAME_WIDTH;
-    const currentHeight = isTouchDevice.current
-      ? window.innerHeight
-      : window.innerHeight;
+    const currentHeight = isTouchDevice.current ? window.innerHeight : window.innerHeight;
     const topPanelHeight = 120;
 
     gameLoopRef.current = setInterval(() => {
@@ -462,10 +463,7 @@ const StellarAssault = () => {
 
         // Clamp position
         newX = Math.max(20, Math.min(currentWidth - 20, newX));
-        newY = Math.max(
-          20,
-          Math.min(currentHeight - topPanelHeight - 20, newY),
-        );
+        newY = Math.max(20, Math.min(currentHeight - topPanelHeight - 20, newY));
 
         // Update ref
         playerRef.current.x = newX;
@@ -586,23 +584,23 @@ const StellarAssault = () => {
 
         setEnemies((prevEnemies) => {
           let enemiesChanged = false;
-
+          
           const remainingEnemies = prevEnemies
             .map((enemy) => {
               // Skip if enemy already dead
               if (enemy.hp <= 0) return enemy;
-
+              
               for (let bIndex = 0; bIndex < remainingBullets.length; bIndex++) {
                 const bullet = remainingBullets[bIndex];
                 if (!bullet) continue;
 
                 const dx = bullet.x - enemy.x;
                 const dy = bullet.y - enemy.y;
-
+                
                 // Quick distance check first (avoid sqrt)
                 if (Math.abs(dx) < ENEMY_SIZE && Math.abs(dy) < ENEMY_SIZE) {
                   const distance = Math.sqrt(dx * dx + dy * dy);
-
+                  
                   if (distance < ENEMY_SIZE) {
                     enemy.hp -= bullet.damage;
                     remainingBullets[bIndex] = null;
@@ -666,9 +664,7 @@ const StellarAssault = () => {
           return enemiesChanged ? remainingEnemies : prevEnemies;
         });
 
-        return bulletsChanged
-          ? remainingBullets.filter((b) => b !== null)
-          : prevBullets;
+        return bulletsChanged ? remainingBullets.filter((b) => b !== null) : prevBullets;
       });
 
       // Player vs enemy collision
@@ -958,7 +954,7 @@ const StellarAssault = () => {
 
         {/* Developer Watermark */}
         <div className="developer-watermark">
-          Developed by Emirhan Büyüksenirli
+          Developed by Emirhan Buyuksenirli
         </div>
 
         {/* Top panel - Shop and Bomb (game ceiling/boundary) */}
@@ -1043,7 +1039,16 @@ const StellarAssault = () => {
             transform: `translate3d(${player.x - PLAYER_SIZE / 2}px, ${player.y - PLAYER_SIZE / 2}px, 0)`,
           }}
         >
-          <Rocket size={PLAYER_SIZE} className="ship-icon" />
+          <img 
+            src="spaceship.png" 
+            alt="Player Ship" 
+            className="ship-icon"
+            style={{
+              width: PLAYER_SIZE + 'px',
+              height: PLAYER_SIZE + 'px',
+              imageRendering: 'pixelated'
+            }}
+          />
           {shieldActive && <div className="shield"></div>}
         </div>
 

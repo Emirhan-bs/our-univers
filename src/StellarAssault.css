@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   position: relative;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
 .stars-bg {
   position: absolute;
   inset: 0;
-  background:
+  background: 
     radial-gradient(2px 2px at 20% 30%, white, transparent),
     radial-gradient(2px 2px at 60% 70%, white, transparent),
     radial-gradient(1px 1px at 50% 50%, white, transparent),
@@ -29,13 +29,8 @@
 }
 
 @keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.3;
-  }
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.3; }
 }
 
 /* Title Screen */
@@ -69,7 +64,7 @@
   display: flex;
   flex-direction: column;
   gap: -10px;
-  text-shadow:
+  text-shadow: 
     0 0 10px #00ff88,
     0 0 20px #00ff88,
     0 0 40px #00ff88,
@@ -91,16 +86,15 @@
 }
 
 @keyframes pulse {
-  0%,
-  100% {
-    text-shadow:
+  0%, 100% {
+    text-shadow: 
       0 0 10px #00ff88,
       0 0 20px #00ff88,
       0 0 40px #00ff88,
       2px 2px 0 #ff006e;
   }
   50% {
-    text-shadow:
+    text-shadow: 
       0 0 20px #00ff88,
       0 0 40px #00ff88,
       0 0 80px #00ff88,
@@ -119,12 +113,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .name-input-container {
@@ -143,14 +133,14 @@
   width: 300px;
   padding: 15px 20px;
   font-size: 24px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   background: rgba(0, 255, 136, 0.1);
   border: 3px solid #00ff88;
   color: #00ff88;
   text-align: center;
   letter-spacing: 4px;
   outline: none;
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(0, 255, 136, 0.3),
     inset 0 0 20px rgba(0, 255, 136, 0.1);
   transition: all 0.3s;
@@ -158,7 +148,7 @@
 
 .name-input:focus {
   border-color: #4ecdc4;
-  box-shadow:
+  box-shadow: 
     0 0 30px rgba(78, 205, 196, 0.5),
     inset 0 0 30px rgba(78, 205, 196, 0.2);
 }
@@ -171,7 +161,7 @@
   margin-top: 30px;
   padding: 15px 40px;
   font-size: 18px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-weight: bold;
   letter-spacing: 3px;
   background: linear-gradient(135deg, #ff006e, #ff6b35);
@@ -181,7 +171,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(255, 0, 110, 0.5),
     0 4px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
@@ -189,14 +179,13 @@
 }
 
 @keyframes buttonGlow {
-  0%,
-  100% {
-    box-shadow:
+  0%, 100% {
+    box-shadow: 
       0 0 20px rgba(255, 0, 110, 0.5),
       0 4px 15px rgba(0, 0, 0, 0.3);
   }
   50% {
-    box-shadow:
+    box-shadow: 
       0 0 40px rgba(255, 0, 110, 0.8),
       0 4px 15px rgba(0, 0, 0, 0.3);
   }
@@ -204,7 +193,7 @@
 
 .start-button:hover:not(:disabled) {
   transform: translateY(-2px) scale(1.05);
-  box-shadow:
+  box-shadow: 
     0 0 40px rgba(255, 0, 110, 0.8),
     0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -296,11 +285,11 @@
   letter-spacing: 8px;
   color: #00ff88;
   margin: 0 0 40px 0;
-  text-shadow:
+  text-shadow: 
     0 0 20px #00ff88,
     0 0 40px #00ff88,
     0 0 60px #00ff88;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
 }
 
 .pause-stats {
@@ -325,23 +314,22 @@
   color: #4ecdc4;
   font-size: 16px;
   letter-spacing: 2px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
 }
 
 .stat-value {
   color: #00ff88;
   font-size: 20px;
   font-weight: bold;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
 }
 
-.resume-button,
-.quit-button {
+.resume-button, .quit-button {
   width: 300px;
   padding: 15px 30px;
   margin: 10px 0;
   font-size: 18px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-weight: bold;
   letter-spacing: 3px;
   border: none;
@@ -377,7 +365,7 @@
   font-size: 14px;
   letter-spacing: 2px;
   opacity: 0.7;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
 }
 
 /* Game Over Screen */
@@ -398,7 +386,7 @@
   letter-spacing: 8px;
   color: #ff006e;
   margin-bottom: 40px;
-  text-shadow:
+  text-shadow: 
     0 0 20px #ff006e,
     0 0 40px #ff006e,
     2px 2px 0 #000;
@@ -406,13 +394,8 @@
 }
 
 @keyframes flicker {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
 }
 
 .final-score {
@@ -430,7 +413,7 @@
   font-size: 48px;
   font-weight: bold;
   color: #00ff88;
-  text-shadow:
+  text-shadow: 
     0 0 20px #00ff88,
     0 0 40px #00ff88;
 }
@@ -446,8 +429,7 @@
 }
 
 @keyframes rankPulse {
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
   }
   50% {
@@ -462,7 +444,7 @@
   margin: 0 auto 40px;
   max-width: 600px;
   max-height: 500px;
-  box-shadow:
+  box-shadow: 
     0 0 30px rgba(0, 255, 136, 0.2),
     inset 0 0 30px rgba(0, 255, 136, 0.1);
   display: flex;
@@ -544,8 +526,7 @@
 }
 
 @keyframes highlight {
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 0 rgba(0, 255, 136, 0);
   }
   50% {
@@ -580,25 +561,21 @@
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .restart-button {
   padding: 15px 40px;
   font-size: 16px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-weight: bold;
   letter-spacing: 3px;
   background: linear-gradient(135deg, #4ecdc4, #00ff88);
   color: #0a0e27;
   border: none;
   cursor: pointer;
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(78, 205, 196, 0.5),
     0 4px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
@@ -606,7 +583,7 @@
 
 .restart-button:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow:
+  box-shadow: 
     0 0 40px rgba(78, 205, 196, 0.8),
     0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -615,37 +592,25 @@
 .game-wrapper {
   width: 100vw;
   height: 100vh;
-  background:
-    radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%),
-    radial-gradient(
-      circle at 10% 20%,
-      rgba(0, 255, 136, 0.05) 0%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(78, 205, 196, 0.05) 0%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(255, 107, 53, 0.03) 0%,
-      transparent 30%
-    );
+  background: 
+    radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%),
+    radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(78, 205, 196, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.03) 0%, transparent 30%);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   overflow: hidden;
 }
 
 /* Animated stars in background */
 .game-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background-image:
+  background-image: 
     radial-gradient(2px 2px at 20px 30px, white, transparent),
     radial-gradient(2px 2px at 60px 70px, white, transparent),
     radial-gradient(1px 1px at 50px 50px, white, transparent),
@@ -657,12 +622,7 @@
     radial-gradient(1px 1px at 100px 140px, white, transparent),
     radial-gradient(1px 1px at 140px 20px, white, transparent);
   background-size: 200px 200px;
-  background-position:
-    0 0,
-    40px 60px,
-    80px 20px,
-    120px 100px,
-    20px 140px;
+  background-position: 0 0, 40px 60px, 80px 20px, 120px 100px, 20px 140px;
   animation: starsFloat 120s linear infinite;
   opacity: 0.6;
   z-index: 0;
@@ -679,7 +639,7 @@
 
 /* Shooting stars */
 .game-wrapper::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -692,28 +652,23 @@
 }
 
 @keyframes shootingStars {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 0;
   }
   10% {
     opacity: 1;
-    background:
-      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%)
-        no-repeat 10% 20% / 100px 2px,
-      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%)
-        no-repeat 80% 60% / 80px 1px;
+    background: 
+      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) no-repeat 10% 20% / 100px 2px,
+      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) no-repeat 80% 60% / 80px 1px;
   }
   11% {
     opacity: 0;
   }
   50% {
     opacity: 1;
-    background:
-      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%)
-        no-repeat 90% 30% / 120px 2px,
-      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%)
-        no-repeat 20% 70% / 90px 1px;
+    background: 
+      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) no-repeat 90% 30% / 120px 2px,
+      linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) no-repeat 20% 70% / 90px 1px;
   }
   51% {
     opacity: 0;
@@ -724,7 +679,7 @@
   position: relative;
   background: rgba(10, 14, 39, 0.95);
   border: 4px solid #00ff88;
-  box-shadow:
+  box-shadow: 
     0 0 60px rgba(0, 255, 136, 0.6),
     0 0 100px rgba(0, 255, 136, 0.3),
     inset 0 0 60px rgba(0, 255, 136, 0.1),
@@ -762,7 +717,7 @@
 .space-bg {
   position: absolute;
   inset: 0;
-  background:
+  background: 
     radial-gradient(2px 2px at 20% 80%, white, transparent),
     radial-gradient(2px 2px at 40% 40%, white, transparent),
     radial-gradient(1px 1px at 50% 60%, white, transparent),
@@ -774,12 +729,8 @@
 }
 
 @keyframes starsMove {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(100%);
-  }
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
 }
 
 /* HUD */
@@ -851,21 +802,22 @@
 .player {
   position: absolute;
   z-index: 50;
-  color: #00ff88;
-  filter: drop-shadow(0 0 10px #00ff88);
+  filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.8));
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
 .ship-icon {
-  transform: rotate(0deg);
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
   animation: shipPulse 1s ease-in-out infinite;
 }
 
 @keyframes shipPulse {
-  0%,
-  100% {
+  0%, 100% {
     filter: drop-shadow(0 0 5px #00ff88);
   }
   50% {
@@ -878,23 +830,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 3px solid #4ecdc4;
+  width: 80px;
+  height: 80px;
+  border: 4px solid #4ecdc4;
   border-radius: 50%;
-  box-shadow:
-    0 0 20px rgba(78, 205, 196, 0.6),
-    inset 0 0 20px rgba(78, 205, 196, 0.3);
+  box-shadow: 
+    0 0 30px rgba(78, 205, 196, 0.7),
+    inset 0 0 30px rgba(78, 205, 196, 0.4);
   animation: shieldRotate 2s linear infinite;
 }
 
 @keyframes shieldRotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Bullets */
@@ -928,8 +876,7 @@
 }
 
 @keyframes elitePulse {
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
     filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 25px #ff00ff);
   }
@@ -972,15 +919,12 @@
   filter: drop-shadow(0 0 15px #ffff00);
 }
 
-.powerup.triple,
-.powerup.dual,
-.powerup.surround {
+.powerup.triple, .powerup.dual, .powerup.surround {
   color: #00ff88;
   filter: drop-shadow(0 0 12px #00ff88);
 }
 
-.bomb-icon,
-.weapon-icon {
+.bomb-icon, .weapon-icon {
   font-size: 28px;
   text-align: center;
   line-height: 1;
@@ -992,13 +936,8 @@
 }
 
 @keyframes powerupFloat {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(180deg);
-  }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
 }
 
 /* Bomb Button */
@@ -1023,7 +962,7 @@
 .bomb-button.available {
   background: linear-gradient(135deg, #ff6b35, #ff006e);
   border: 3px solid #ffff00;
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(255, 255, 0, 0.6),
     0 0 40px rgba(255, 107, 53, 0.4);
   animation: bombPulse 1.5s ease-in-out infinite;
@@ -1031,7 +970,7 @@
 
 .bomb-button.available:hover {
   transform: translateX(-50%) scale(1.1);
-  box-shadow:
+  box-shadow: 
     0 0 30px rgba(255, 255, 0, 0.9),
     0 0 60px rgba(255, 107, 53, 0.6);
 }
@@ -1048,14 +987,13 @@
 }
 
 @keyframes bombPulse {
-  0%,
-  100% {
-    box-shadow:
+  0%, 100% {
+    box-shadow: 
       0 0 20px rgba(255, 255, 0, 0.6),
       0 0 40px rgba(255, 107, 53, 0.4);
   }
   50% {
-    box-shadow:
+    box-shadow: 
       0 0 40px rgba(255, 255, 0, 0.9),
       0 0 80px rgba(255, 107, 53, 0.7);
   }
@@ -1110,13 +1048,13 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 45;
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(0, 255, 136, 0.6),
     inset 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .touch-indicator::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1176,14 +1114,10 @@
   justify-content: center;
   gap: 8px;
   padding: 12px 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 136, 0.15),
-    rgba(78, 205, 196, 0.15)
-  );
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(78, 205, 196, 0.15));
   border: 2px solid #00ff88;
   color: #00ff88;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-size: 12px;
   cursor: pointer;
   transition: all 0.3s;
@@ -1192,11 +1126,7 @@
 }
 
 .shop-btn:hover:not(:disabled) {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 136, 0.3),
-    rgba(78, 205, 196, 0.3)
-  );
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.3), rgba(78, 205, 196, 0.3));
   border-color: #4ecdc4;
   box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
   transform: translateY(3px);
@@ -1244,7 +1174,7 @@
 .bomb-button.available {
   background: linear-gradient(135deg, #ff6b35, #ff006e);
   border: 3px solid #ffff00;
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(255, 255, 0, 0.6),
     0 0 40px rgba(255, 107, 53, 0.4);
   animation: bombPulse 1.5s ease-in-out infinite;
@@ -1252,7 +1182,7 @@
 
 .bomb-button.available:hover {
   transform: scale(1.1);
-  box-shadow:
+  box-shadow: 
     0 0 30px rgba(255, 255, 0, 0.9),
     0 0 60px rgba(255, 107, 53, 0.6);
 }
@@ -1269,14 +1199,13 @@
 }
 
 @keyframes bombPulse {
-  0%,
-  100% {
-    box-shadow:
+  0%, 100% {
+    box-shadow: 
       0 0 20px rgba(255, 255, 0, 0.6),
       0 0 40px rgba(255, 107, 53, 0.4);
   }
   50% {
-    box-shadow:
+    box-shadow: 
       0 0 40px rgba(255, 255, 0, 0.9),
       0 0 80px rgba(255, 107, 53, 0.7);
   }
@@ -1356,7 +1285,7 @@
   z-index: 5;
   white-space: nowrap;
   user-select: none;
-  text-shadow:
+  text-shadow: 
     0 0 10px rgba(0, 255, 136, 0.2),
     0 0 20px rgba(0, 255, 136, 0.1);
 }
