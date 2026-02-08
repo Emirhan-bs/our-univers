@@ -989,7 +989,7 @@ const StellarAssault = () => {
 
         {/* Developer Watermark */}
         <div className="developer-watermark">
-          Developed by Emirhan Büyükşenirli
+          Developed by Emirhan Buyuksenirli
         </div>
 
         {/* Top panel - Shop and Bomb (game ceiling/boundary) */}
