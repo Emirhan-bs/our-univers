@@ -677,7 +677,7 @@
 
 .game-canvas {
   position: relative;
-  background: linear-gradient(180deg, #1a2d5a 0%, #2a4080 50%, #1a2d5a 100%);
+  background: linear-gradient(180deg, #091d4d 0%, #04070e 50%, #12234b 100%);
   border: 4px solid #00ff88;
   box-shadow: 
     0 0 60px rgba(0, 255, 136, 0.6),
