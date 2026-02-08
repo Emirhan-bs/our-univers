@@ -1067,12 +1067,12 @@ const StellarAssault = () => {
           }}
         >
           <img 
-            src="spaceship.png" 
+            src="/spaceship.png" 
             alt="Player Ship" 
             className="ship-icon"
             style={{
-              width: PLAYER_SIZE + 'px',
-              height: PLAYER_SIZE + 'px',
+              width: (isTouchDevice.current ? PLAYER_SIZE * 0.6 : PLAYER_SIZE) + 'px',
+              height: (isTouchDevice.current ? PLAYER_SIZE * 0.6 : PLAYER_SIZE) + 'px',
               imageRendering: 'pixelated'
             }}
           />
