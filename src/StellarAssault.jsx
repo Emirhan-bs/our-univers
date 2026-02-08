@@ -328,6 +328,20 @@ const StellarAssault = () => {
     if (!gameCanvas) return;
 
     const handleTouchStart = (e) => {
+      // Check if touch is on UI elements (buttons, shop, HUD)
+      const target = e.target;
+      if (
+        target.closest('.shop-btn') ||
+        target.closest('.bomb-button') ||
+        target.closest('.pause-btn') ||
+        target.closest('.top-panel') ||
+        target.closest('.hud')
+      ) {
+        // Don't move player if touching UI - but don't prevent default either
+        touchPosition.current = null;
+        return;
+      }
+      
       e.preventDefault();
       const rect = gameCanvas.getBoundingClientRect();
       const touch = e.touches[0];
@@ -338,6 +352,23 @@ const StellarAssault = () => {
     };
 
     const handleTouchMove = (e) => {
+      // If touch started on UI, ignore movement
+      if (!touchPosition.current) {
+        return;
+      }
+      
+      const target = e.target;
+      if (
+        target.closest('.shop-btn') ||
+        target.closest('.bomb-button') ||
+        target.closest('.pause-btn') ||
+        target.closest('.top-panel') ||
+        target.closest('.hud')
+      ) {
+        touchPosition.current = null;
+        return;
+      }
+      
       e.preventDefault();
       const rect = gameCanvas.getBoundingClientRect();
       const touch = e.touches[0];
@@ -461,9 +492,12 @@ const StellarAssault = () => {
             newY = playerRef.current.y + speed;
         }
 
-        // Clamp position
+        // Clamp position - adjusted for mobile HUD and panels
+        const topBoundary = isTouchDevice.current ? 140 : 20; // HUD + top panel space
+        const bottomBoundary = currentHeight - topPanelHeight - 20;
+        
         newX = Math.max(20, Math.min(currentWidth - 20, newX));
-        newY = Math.max(20, Math.min(currentHeight - topPanelHeight - 20, newY));
+        newY = Math.max(topBoundary, Math.min(bottomBoundary, newY));
 
         // Update ref
         playerRef.current.x = newX;
@@ -496,7 +530,8 @@ const StellarAssault = () => {
           x: e.x + Math.sin(e.y * 0.02) * e.wobble,
         }));
 
-        return moved.filter((e) => e.y < currentHeight - topPanelHeight);
+        // Enemies disappear well before the bottom panel (150px buffer)
+        return moved.filter((e) => e.y < currentHeight - topPanelHeight - 150);
       });
 
       setPowerups((prev) => {
@@ -954,7 +989,7 @@ const StellarAssault = () => {
 
         {/* Developer Watermark */}
         <div className="developer-watermark">
-          Developed by Emirhan Buyuksenirli
+          Developed by Emirhan Büyükşenirli
         </div>
 
         {/* Top panel - Shop and Bomb (game ceiling/boundary) */}

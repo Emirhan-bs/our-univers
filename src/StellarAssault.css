@@ -745,6 +745,30 @@
   z-index: 100;
   font-size: 14px;
   letter-spacing: 1px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Mobile HUD - Make sure it's visible */
+@media (max-width: 768px) {
+  .hud {
+    font-size: 11px;
+    gap: 5px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  .hud-item {
+    padding: 5px 10px !important;
+    font-size: 11px !important;
+  }
+  
+  .pause-btn {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 20px !important;
+  }
 }
 
 .pause-btn {
@@ -830,13 +854,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  border: 4px solid #4ecdc4;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #4ecdc4;
   border-radius: 50%;
   box-shadow: 
-    0 0 30px rgba(78, 205, 196, 0.7),
-    inset 0 0 30px rgba(78, 205, 196, 0.4);
+    0 0 20px rgba(78, 205, 196, 0.6),
+    inset 0 0 20px rgba(78, 205, 196, 0.3);
   animation: shieldRotate 2s linear infinite;
 }
 
