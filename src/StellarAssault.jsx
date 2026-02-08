@@ -328,20 +328,19 @@ const StellarAssault = () => {
     if (!gameCanvas) return;
 
     const handleTouchStart = (e) => {
-      // Check if touch is on UI elements (buttons, shop, HUD)
+      // Check if touching a button or UI element
       const target = e.target;
-      if (
-        target.closest('.shop-btn') ||
-        target.closest('.bomb-button') ||
-        target.closest('.pause-btn') ||
-        target.closest('.top-panel') ||
-        target.closest('.hud')
-      ) {
-        // Don't move player if touching UI - but don't prevent default either
-        touchPosition.current = null;
+      const isUIElement = target.closest('button') || 
+                          target.closest('.shop') || 
+                          target.closest('.hud') ||
+                          target.closest('.top-panel');
+      
+      if (isUIElement) {
+        // Let the UI element handle the click normally
         return;
       }
       
+      // Game area touch - move player
       e.preventDefault();
       const rect = gameCanvas.getBoundingClientRect();
       const touch = e.touches[0];
@@ -352,20 +351,14 @@ const StellarAssault = () => {
     };
 
     const handleTouchMove = (e) => {
-      // If touch started on UI, ignore movement
-      if (!touchPosition.current) {
-        return;
-      }
-      
+      // Check if touching a button or UI element
       const target = e.target;
-      if (
-        target.closest('.shop-btn') ||
-        target.closest('.bomb-button') ||
-        target.closest('.pause-btn') ||
-        target.closest('.top-panel') ||
-        target.closest('.hud')
-      ) {
-        touchPosition.current = null;
+      const isUIElement = target.closest('button') || 
+                          target.closest('.shop') || 
+                          target.closest('.hud') ||
+                          target.closest('.top-panel');
+      
+      if (isUIElement) {
         return;
       }
       
@@ -379,7 +372,6 @@ const StellarAssault = () => {
     };
 
     const handleTouchEnd = (e) => {
-      e.preventDefault();
       touchPosition.current = null;
     };
 
@@ -989,7 +981,7 @@ const StellarAssault = () => {
 
         {/* Developer Watermark */}
         <div className="developer-watermark">
-          Developed by Emirhan Büyükşenirli
+          Developed by Emirhan Buyuksenirli
         </div>
 
         {/* Top panel - Shop and Bomb (game ceiling/boundary) */}

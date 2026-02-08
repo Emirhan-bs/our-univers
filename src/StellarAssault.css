@@ -718,13 +718,27 @@
   position: absolute;
   inset: 0;
   background: 
+    /* Lighter base gradient */
+    linear-gradient(180deg, #0a0e27 0%, #1a1e47 100%),
+    /* Stars */
     radial-gradient(2px 2px at 20% 80%, white, transparent),
     radial-gradient(2px 2px at 40% 40%, white, transparent),
     radial-gradient(1px 1px at 50% 60%, white, transparent),
     radial-gradient(1px 1px at 80% 10%, white, transparent),
     radial-gradient(2px 2px at 90% 70%, white, transparent),
-    radial-gradient(1px 1px at 15% 20%, white, transparent);
-  background-size: 100% 100%;
+    radial-gradient(1px 1px at 15% 20%, white, transparent),
+    radial-gradient(2px 2px at 60% 90%, white, transparent),
+    radial-gradient(1px 1px at 25% 50%, white, transparent),
+    radial-gradient(2px 2px at 70% 30%, white, transparent),
+    radial-gradient(1px 1px at 35% 70%, white, transparent),
+    radial-gradient(2px 2px at 85% 45%, white, transparent),
+    radial-gradient(1px 1px at 10% 60%, white, transparent),
+    radial-gradient(1px 1px at 45% 15%, white, transparent),
+    radial-gradient(2px 2px at 95% 85%, white, transparent),
+    radial-gradient(1px 1px at 5% 35%, white, transparent),
+    radial-gradient(1px 1px at 75% 55%, white, transparent);
+  background-size: 100% 100%, 200% 200%;
+  background-repeat: no-repeat, repeat;
   animation: starsMove 20s linear infinite;
 }
 
@@ -749,8 +763,9 @@
   gap: 8px;
 }
 
-/* Mobile HUD - Make sure it's visible */
+/* Mobile Responsive - Scale down everything */
 @media (max-width: 768px) {
+  /* HUD scaling */
   .hud {
     font-size: 11px;
     gap: 5px;
@@ -768,6 +783,69 @@
     width: 40px !important;
     height: 40px !important;
     font-size: 20px !important;
+  }
+  
+  /* Game elements scaling - smaller on mobile */
+  .player {
+    transform: scale(0.6) !important;
+  }
+  
+  .enemy {
+    transform: scale(0.7) !important;
+  }
+  
+  .bullet {
+    transform: scale(0.8) !important;
+  }
+  
+  .powerup {
+    transform: scale(0.7) !important;
+  }
+  
+  /* Bottom panel - smaller on mobile */
+  .top-panel {
+    padding: 8px 10px !important;
+    gap: 10px !important;
+  }
+  
+  .shop-title {
+    font-size: 10px !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .shop-buttons {
+    gap: 8px !important;
+  }
+  
+  .shop-btn {
+    min-width: 70px !important;
+    padding: 8px 10px !important;
+    gap: 4px !important;
+  }
+  
+  .shop-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  .upgrade-name {
+    font-size: 9px !important;
+  }
+  
+  .cost {
+    font-size: 8px !important;
+  }
+  
+  .bomb-button {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 24px !important;
+  }
+  
+  /* Watermark */
+  .developer-watermark {
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
   }
 }
 
@@ -1235,47 +1313,6 @@
   }
 }
 
-/* Mobile Responsive - Top Panel */
-@media (max-width: 768px) {
-  .top-panel {
-    padding: 8px 10px;
-    gap: 10px;
-  }
-
-  .shop-title {
-    font-size: 10px;
-    margin-bottom: 5px;
-  }
-
-  .shop-buttons {
-    gap: 8px;
-  }
-
-  .shop-btn {
-    min-width: 70px;
-    padding: 8px 10px;
-    gap: 4px;
-  }
-
-  .shop-btn svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-
-  .upgrade-name {
-    font-size: 9px;
-  }
-
-  .cost {
-    font-size: 8px;
-  }
-
-  .bomb-button {
-    width: 55px;
-    height: 55px;
-    font-size: 28px;
-  }
-}
 
 /* Performance Optimizations - GPU Acceleration */
 .player,
@@ -1314,9 +1351,4 @@
     0 0 20px rgba(0, 255, 136, 0.1);
 }
 
-@media (max-width: 768px) {
-  .developer-watermark {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-}
+/* Mobile Responsive Styles */
