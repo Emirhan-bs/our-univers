@@ -677,7 +677,7 @@
 
 .game-canvas {
   position: relative;
-  background: rgba(10, 14, 39, 0.95);
+  background: linear-gradient(180deg, #1a2d5a 0%, #2a4080 50%, #1a2d5a 100%);
   border: 4px solid #00ff88;
   box-shadow: 
     0 0 60px rgba(0, 255, 136, 0.6),
@@ -690,7 +690,6 @@
   max-width: 600px;
   height: 100vh;
   z-index: 10;
-  backdrop-filter: blur(5px);
   cursor: none;
 }
 
@@ -718,28 +717,53 @@
   position: absolute;
   inset: 0;
   background: 
-    /* Much lighter gradient - almost no black */
-    linear-gradient(180deg, #1a2550 0%, #2a3570 50%, #1a2550 100%),
-    /* More visible stars */
-    radial-gradient(3px 3px at 20% 80%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(2px 2px at 40% 40%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 50% 60%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(2px 2px at 80% 10%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(3px 3px at 90% 70%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 15% 20%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(3px 3px at 60% 90%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(2px 2px at 25% 50%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(3px 3px at 70% 30%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(2px 2px at 35% 70%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(2px 2px at 85% 45%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 10% 60%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(2px 2px at 45% 15%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(3px 3px at 95% 85%, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(2px 2px at 5% 35%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(2px 2px at 75% 55%, rgba(255, 255, 255, 0.8), transparent);
-  background-size: 100% 100%, 200% 200%;
-  background-repeat: no-repeat, repeat;
+    radial-gradient(2px 2px at 20% 80%, white, transparent),
+    radial-gradient(2px 2px at 40% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 60%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 70%, white, transparent),
+    radial-gradient(1px 1px at 15% 20%, white, transparent),
+    radial-gradient(2px 2px at 60% 90%, white, transparent),
+    radial-gradient(1px 1px at 25% 50%, white, transparent),
+    radial-gradient(2px 2px at 70% 30%, white, transparent),
+    radial-gradient(1px 1px at 35% 70%, white, transparent),
+    radial-gradient(2px 2px at 85% 45%, white, transparent),
+    radial-gradient(1px 1px at 10% 60%, white, transparent),
+    radial-gradient(1px 1px at 45% 15%, white, transparent),
+    radial-gradient(2px 2px at 95% 85%, white, transparent),
+    radial-gradient(1px 1px at 5% 35%, white, transparent),
+    radial-gradient(1px 1px at 75% 55%, white, transparent);
+  background-size: 200% 200%;
+  background-repeat: repeat;
   animation: starsMove 20s linear infinite;
+}
+
+/* Mobile - brighter space background */
+@media (max-width: 768px) {
+  .space-bg {
+    background: 
+      /* Much lighter gradient for mobile */
+      linear-gradient(180deg, #1a2550 0%, #2a3570 50%, #1a2550 100%),
+      /* More visible stars */
+      radial-gradient(3px 3px at 20% 80%, rgba(255, 255, 255, 0.9), transparent),
+      radial-gradient(2px 2px at 40% 40%, rgba(255, 255, 255, 0.8), transparent),
+      radial-gradient(2px 2px at 50% 60%, rgba(255, 255, 255, 0.7), transparent),
+      radial-gradient(2px 2px at 80% 10%, rgba(255, 255, 255, 0.9), transparent),
+      radial-gradient(3px 3px at 90% 70%, rgba(255, 255, 255, 0.8), transparent),
+      radial-gradient(2px 2px at 15% 20%, rgba(255, 255, 255, 0.7), transparent),
+      radial-gradient(3px 3px at 60% 90%, rgba(255, 255, 255, 0.9), transparent),
+      radial-gradient(2px 2px at 25% 50%, rgba(255, 255, 255, 0.8), transparent),
+      radial-gradient(3px 3px at 70% 30%, rgba(255, 255, 255, 0.9), transparent),
+      radial-gradient(2px 2px at 35% 70%, rgba(255, 255, 255, 0.7), transparent),
+      radial-gradient(2px 2px at 85% 45%, rgba(255, 255, 255, 0.8), transparent),
+      radial-gradient(2px 2px at 10% 60%, rgba(255, 255, 255, 0.7), transparent),
+      radial-gradient(2px 2px at 45% 15%, rgba(255, 255, 255, 0.8), transparent),
+      radial-gradient(3px 3px at 95% 85%, rgba(255, 255, 255, 0.9), transparent),
+      radial-gradient(2px 2px at 5% 35%, rgba(255, 255, 255, 0.7), transparent),
+      radial-gradient(2px 2px at 75% 55%, rgba(255, 255, 255, 0.8), transparent);
+    background-size: 100% 100%, 200% 200%;
+    background-repeat: no-repeat, repeat;
+  }
 }
 
 @keyframes starsMove {
