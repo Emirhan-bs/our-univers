@@ -742,9 +742,9 @@
 @media (max-width: 768px) {
   .space-bg {
     background: 
-      /* Much lighter gradient for mobile */
-      linear-gradient(180deg, #1a2550 0%, #2a3570 50%, #1a2550 100%),
-      /* More visible stars */
+      /* Single dark color - no gradient */
+      #0d1b2a,
+      /* Visible stars */
       radial-gradient(3px 3px at 20% 80%, rgba(255, 255, 255, 0.9), transparent),
       radial-gradient(2px 2px at 40% 40%, rgba(255, 255, 255, 0.8), transparent),
       radial-gradient(2px 2px at 50% 60%, rgba(255, 255, 255, 0.7), transparent),
@@ -1162,32 +1162,6 @@
 }
 
 /* Touch Indicator */
-.touch-indicator {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border: 3px solid #00ff88;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 45;
-  box-shadow: 
-    0 0 20px rgba(0, 255, 136, 0.6),
-    inset 0 0 20px rgba(0, 255, 136, 0.3);
-}
-
-.touch-indicator::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background: #00ff88;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #00ff88;
-}
-
 /* Shop */
 /* Top Panel - At bottom but top border is game ceiling */
 .top-panel {
